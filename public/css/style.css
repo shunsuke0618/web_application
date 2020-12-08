@@ -1,0 +1,42 @@
+
+body {
+    font-size: 16px;
+}
+
+
+hr {
+    border-width: 10px;
+    border-color: #2e99a9;
+}
+main {
+    padding: 30px;
+   
+}
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+.top_button_1{
+    margin: 50px 0px 50px 0px;  
+      
+}
+
+.top_button_2{
+    margin: 100px 0px 50px 0px;    
+}
+
+.category_1{
+    margin: 50px 0px 50px 0px; 
+}
+
+.category_2{
+    margin: 50px 0px 50px 0px; 
+}
+
+.category_3{
+    margin: 50px 0px 50px 0px; 
+}
