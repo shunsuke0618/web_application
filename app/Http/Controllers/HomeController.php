@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
+     * ミドルウェアの指定
      * Create a new controller instance.
      *
      * @return void
@@ -17,6 +18,7 @@ class HomeController extends Controller
     }
 
     /**
+     * トップページを表示する
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
