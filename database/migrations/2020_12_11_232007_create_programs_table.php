@@ -19,6 +19,7 @@ class CreateProgramsTable extends Migration
             $table->string('timerange');
             $table->text('content');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
