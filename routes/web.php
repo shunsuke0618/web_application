@@ -14,5 +14,8 @@
 Route::get('/', 'TopPageController@show');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/program', 'ProgramController@index')->name('program');
+Route::get('/program/show/{id}', 'ProgramController@show');
+
 
 
