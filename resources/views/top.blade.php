@@ -1,4 +1,3 @@
-
     <!DOCTYPE html>
     <html>
         <head>
@@ -75,8 +74,6 @@
                 </div>
                 <hr>
             </main>
-            <div class="container">
-                @include("parts.footer")
-            </div>
+            @include("parts.footer") 
         </body>
     </html>
