@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Program extends Model
 {
     use SoftDeletes;
+    public function reviews(){
+        return $this->hasMany(\App\Reviews::class, 'program_id', 'id');
+    }
 }
