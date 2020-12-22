@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
         $dataSet = [
         [
             'name' => '山田太郎',
-            'email' => 'yamada@maol.com',
+            'email' => 'yamada@mail.com',
             'password' => 'yamadayamada',   
         ],
         [
