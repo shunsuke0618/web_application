@@ -7,11 +7,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Review extends Model
 {
-    use SoftDeletes;
-    protected $fillable = [
-        'body',
-    ];
-    public function user(){
-        return $this->belongsTo(\App\User::class, 'user_id', 'id')->select('id', 'name');
+    protected $fillable = [body];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    Public function Program()
+    {
+        return $this->belongsTo(Review::class);
     }
 }

@@ -28,8 +28,18 @@
                         <tr><td>放送時間</td><td>{{$program->timerange}}</tr>
                         <tr><td>番組内容</td><td>{{$program->content}}</tr>
                     </table>
-                </div>
+                    <div class="container mt-4">
+                            @foreach($program->reviews as $review)
+                                <div class="card">
+                                    <div class="card-header">{{ $review->user->name }}</div>
+                                    <div class="card-body">
+                                        <p class="card-text">{{ $review->body }}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                    </div>
             </main>
+            <hr>
         </body>
     </html>
     
