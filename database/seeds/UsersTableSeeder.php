@@ -16,22 +16,22 @@ class UsersTableSeeder extends Seeder
         [
             'name' => '山田太郎',
             'email' => 'yamada@mail.com',
-            'password' => 'yamadayamada',   
+            'password' => bcrypt('yamadayamada'),   
         ],
         [
             'name' => '山田花子',
             'email' => 'hanako@mail.com',
-            'password' => 'hanakohanako',
+            'password' => bcrypt('hanakohanako'),
         ],   
         [
             'name' => '田中太郎',
             'email' => 'tanaka@mail.com',
-            'password' => 'tanakatanaka',
+            'password' => bcrypt('tanakatanaka'),
         ],  
         [
             'name' => '田中二郎',
             'email' => 'jirou@mail.com',
-            'password' => 'jiroujirou',
+            'password' => bcrypt('jiroujirou'),
         ],  
     ];    
     foreach($dataSet as $data){

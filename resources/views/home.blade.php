@@ -19,6 +19,9 @@
 
                     You are logged in!
                 </div>
+                <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="/">トップページ</a></button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="/program">番組一覧ページ</a></button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block">レビュー投稿ページ</button>
             </div>
         </div>
     </div>
