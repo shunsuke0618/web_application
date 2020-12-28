@@ -15,7 +15,7 @@ Route::get('/', 'TopPageController@show');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/program', 'ProgramController@index')->name('program');
-Route::get('/program/show/{id}', 'ProgramController@show');
+Route::get('/program/show/{id}', 'ProgramController@show')->name('program.show');
 Route::middleware('auth')->group(function () {
     Route::resource('reviews','ReviewsController',['only' => ['store']]);
 });

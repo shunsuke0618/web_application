@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
+use Auth;
 
 class ProgramController extends Controller
 {
@@ -15,6 +16,10 @@ class ProgramController extends Controller
     public function show($id)
     {
         $program = Program::find($id);
-        return view('show')->with('program', $program);
+        $user = Auth::user();
+        return view('show')->with([
+            'program' => $program,
+            'user' => $user 
+        ]);
     }
 }

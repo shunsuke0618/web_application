@@ -8,7 +8,7 @@ use App\Models\Review;
 
 class Review extends Model
 {
-    protected $fillable = ['body'];
+    protected $fillable = ['body', 'user_id', 'ratings'];
     public function user()
     {
         return $this->belongsTo(User::class);
