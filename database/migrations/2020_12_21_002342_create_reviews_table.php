@@ -22,7 +22,6 @@ class CreateReviewsTable extends Migration
             $table->timestamps();
             $table->foreign('program_id')->references('id')->on('programs');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unique(['program_id', 'user_id']);
         });
     }
 

@@ -50,6 +50,12 @@
                     <div class="card-body">
                         <p class="card-text">{{ $review->body }}</p>
                     </div>
+                    @if(Auth::id() === $review->user_id)
+                        <form method="POST" action="{{ route('reviews.delete', $review->id) }}">
+                            @csrf
+                            <button type="submit" class="btn btn-danger">削除</button>
+                        </form>
+                    @endif
                 </div>
             </div>
             @endforeach

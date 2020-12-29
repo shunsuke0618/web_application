@@ -16,10 +16,18 @@ class ReviewsController extends Controller
             'user_id' => 'required',
             'program_id' => 'required|exists:programs,id',
             'ratings' => 'required', // 星が未評価の場合、6としているため必須項目
-            'body' => 'required|max:2000'
+            'body' => 'required|max:2000',
         ]);
         $program = Program::findOrFail($params['program_id']);
         $program->reviews()->create($params);
         return redirect()->route('program.show', ['id' => $params['program_id']]);
+    }
+    public function delete(Review $review)
+    {
+        if (Auth::id() !== $post->user_id) {
+            abort(403);
+        }
+        $review->delete();
+        return redirect()->to('/');
     }
 }

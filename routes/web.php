@@ -18,4 +18,5 @@ Route::get('/program', 'ProgramController@index')->name('program');
 Route::get('/program/show/{id}', 'ProgramController@show')->name('program.show');
 Route::middleware('auth')->group(function () {
     Route::resource('reviews','ReviewsController',['only' => ['store']]);
+    Route::post('{review}/delete', 'ReviewController@delete')->name('reviews.delete');
 });
