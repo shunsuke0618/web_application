@@ -51,6 +51,7 @@
                         <p class="card-text">{{ $review->body }}</p>
                     </div>
                     @if(Auth::id() === $review->user_id)
+                        <a href="{{ action('ReviewsController@edit', $review->id) }}" class="btn btn-info">編集する</a>
                         <form method="POST" action="{{ route('reviews.delete', $review->id) }}">
                             @csrf
                             <button type="submit" class="btn btn-danger">削除</button>

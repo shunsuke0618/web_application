@@ -8,6 +8,7 @@ use App\Http\Requests\ReviewRequest;
 use App\Models\Review;
 use App\Models\Program;
 
+
 class ReviewsController extends Controller
 {
     public function store(Request $request)
@@ -22,12 +23,24 @@ class ReviewsController extends Controller
         $program->reviews()->create($params);
         return redirect()->route('program.show', ['id' => $params['program_id']]);
     }
+    public function edit(Request $request)
+    {
+        $review = Review::find($request->id);
+        return view('edit', ['review' => $review]);
+    }
+    public function update(Request $request)
+    {
+        $review = Review::find($request->id);
+        $review->body = $request->body;
+        $review->save();
+        return redirect()->route('program.show', ['id' => $review['program_id']]);
+    }
     public function delete(Review $review)
     {
-        if (Auth::id() !== $post->user_id) {
+        if (Auth::id() !== $review->user_id) {
             abort(403);
         }
         $review->delete();
-        return redirect()->to('/');
+        return redirect()->route('program.show', ['id' => $review['program_id']]);
     }
 }
